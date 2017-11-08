@@ -35,7 +35,7 @@ install_requires = [
     'pyjwt==1.3.0',
     requests,
     'six>=1.8.0',
-    'httpsig==1.1.2'
+    'httpsig-1.1.2-2-g4246c13'
 ]
 
 class PyTest(TestCommand):
