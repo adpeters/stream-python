@@ -35,7 +35,7 @@ install_requires = [
     'pyjwt==1.3.0',
     requests,
     'six>=1.8.0',
-    'httpsig-1.1.2-2-g4246c13'
+    'httpsig_custom'
 ]
 
 class PyTest(TestCommand):
@@ -64,6 +64,9 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     install_requires=install_requires,
+    dependency_links=[
+        'https://github.com/adpeters/httpsig/master#egg=httpsig_custom',
+    ],
     extras_require={'test': tests_require},
     cmdclass={'test': PyTest},
     tests_require=tests_require,
